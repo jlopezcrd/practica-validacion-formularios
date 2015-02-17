@@ -192,7 +192,8 @@ livereload: {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/index.html'
+      //html: '<%= config.app %>/index.html'
+      html: '<%= config.app %>/*.html'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration

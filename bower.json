@@ -2,6 +2,7 @@
   "name": "practica-validacion-formularios",
   "private": true,
   "dependencies": {
-    "jquery-validation": "^1.13.1"
+    "jquery-validation": "^1.13.1",
+    "boostrap": "^3.3.2"
 }
 }

@@ -19,22 +19,61 @@
 
     <div class="hero-unit">
         Rellene el formulario:
-        <form action="">
-            <label for="">Nombre:</label>
-            <input type="text" id="nombre" name="name">
-        </form>
-    </div>
+        <form action=""  method="post" name="miform" id="miform" class="form-horizontal">
+            <div class="form-group">
+                <label for="nombre" class="col-sm-2 control-label">Nombre:</label>
+                <div class="col-sm-10">
+                  <input type="nombre" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+              </div>
+          </div>
+          <label for="">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos"><br />
+          <label for="">Telefono:</label>
+          <input type="text" id="telefono" name="telefono"><br />
+          <label for="">Email:</label>
+          <input type="text" id="email" name="email"><br />
+          <label for="">Repetir email:</label>
+          <input type="text" id="remail" name="remail"><br />
+          // FALTA CHECKBOX <br/>
+          //DEMANDANTE PARTICULAR EMPRESA <br/>
+          <label for="">CIF/NIF:</label>
+          <input type="text" id="cif" name="cif"><br />
+          <label for="">Nombre Empresa:</label>
+          <input type="text" id="nombre_empresa" name="nombre_empresa"><br />
+          <label for="">Direccion:</label>
+          <input type="text" id="direccion" name="direccion"><br />
+          <label for="">CP:</label>
+          <input type="text" id="cp" name="cp"><br />
+          <label for="">Localidad:</label>
+          <input type="text" id="localidad" name="localidad"><br />
+          <label for="">Provincia:</label>
+          <input type="text" id="provincia" name="provincia"><br />
+          <label for="">Pais:</label>
+          <input type="text" id="pais" name="pais"><br />
+          <label for="">Código IBAN:</label>
+          <input type="text" id="codigo_iban" name="codigo_iban"><br />
+          //FORMA DE PAGO <br/>
+          <label for="">Usuario:</label>
+          <input type="text" id="usuario" name="usuario"><br />
+          <label for="">Contraseña:</label>
+          <input type="text" id="password" name="password"><br />
+          <label for="">Repetir contraseña:</label>
+          <input type="text" id="repassword" name="repassword"><br />
+
+          <input type="submit" value="Comprobar y enviar"><br />
+      </form>
+  </div>
 
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+  <!-- build:js({app,.tmp}) scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
