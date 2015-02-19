@@ -1,9 +1,29 @@
 $(document).ready(function () {
 
-    $("#miform").submit(function(event) {
-        event.preventDefault();
-        console.log("hola");
-        $("#miform").validate({
+    // $(function () {
+    //     $("#password").complexify({}, function (valid, complexity) {
+    //         document.getElementById("PassValue").value = complexity;
+    //     });
+    // });
+
+$('#complexify #password').complexify({}, function (valid, complexity) {
+    var progressBar = $('#complexify #complexity-bar');
+
+    progressBar.toggleClass('progress-bar-success', valid);
+    progressBar.toggleClass('progress-bar-danger', !valid);
+    progressBar.css({'width': complexity + '%'});
+
+    $('#complexify #complexity').text(Math.round(complexity) + '%');
+});
+
+$("#miform").submit(function(event) {
+    event.preventDefault();
+    console.log("hola");
+
+    $("#miform").validate({
+        errorElement: 'span',
+        errorElementClass: 'has-error has-feedback',
+        errorClass: 'has-error has-feedback',
                 // REGLAS
                 rules: {
                     nombre: "required",
