@@ -33,3 +33,14 @@ body {
   font-weight: bold;
   padding-left: 2%;
 }
+
+.strong {
+  font-weight: bold;
+}
+
+.contenedor-form {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding:  10px;
+  margin-bottom: 2%;
+}

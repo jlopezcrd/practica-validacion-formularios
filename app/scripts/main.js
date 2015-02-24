@@ -28,7 +28,11 @@ $("#miform").submit(function(event) {
                 rules: {
                     nombre: "required",
                     apellidos: "required",
-                    telefono: "required",
+                    telefono: {
+                        required: true,
+                        digits: true,
+                        minlength: 9
+                    },
                     email: {
                         required: true,
                         email: true
@@ -60,7 +64,7 @@ $("#miform").submit(function(event) {
                 messages: {
                     nombre: "El campo nombre es requerido",
                     apellidos: "El campo apellidos es requerido",
-                    telefono: "El campo telefono es requerido",
+                    telefono: "El campo telefono es requerido y debe contener 9 digitos",
                     email: {
                         required: "El campo email es requerido",
                         email: "Debe ser tipo email"
