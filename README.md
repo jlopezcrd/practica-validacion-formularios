@@ -1,5 +1,7 @@
 # Práctica Validación de Formularios
 
+ACCESO A LA WEB: http://jorgelopez.infenlaces.com/validacion/formulario.html
+
 Se realiza una página web para una empresa que vende servicios de Internet a otras compañías.
 La empresa nos solicita un un formulario de contacto en el que recogeremos no sólo los datos de contacto, sino también los datos para facturación o acceso por Internet.
 
