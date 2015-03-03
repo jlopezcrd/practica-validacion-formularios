@@ -108,7 +108,7 @@
                 <div class="form-group">
                     <label for="nif" class="col-sm-2 control-label" id="nif-label">NIF:</label>
                     <div class="col-sm-2">
-                        <input type="nif" class="form-control" name="nif" id="nif" placeholder="nif">
+                        <input type="text" class="form-control" name="nif" id="nif" placeholder="nif">
                     </div>
                 </div>
                 <div class="form-group">
@@ -182,7 +182,7 @@
                 <div class="form-group">
                     <label for="usuario" class="col-sm-2 control-label">Usuario:</label>
                     <div class="col-sm-2">
-                        <input type="usuario" class="form-control" name="usuario" id="usuario" placeholder="usuario">
+                        <input type="usuario" class="form-control" name="usuario" id="usuario" placeholder="usuario" disabled>
                     </div>
                 </div>
                 <div id="complexify">
@@ -205,26 +205,26 @@
                 <div class="form-group">
                     <label for="repetirpassword" class="col-sm-2 control-label">Repetir Password:</label>
                     <div class="col-sm-2">
-                       <input type="repetirpassword" class="form-control" name="repassword" id="repassword" placeholder="repetirpassword">
-                   </div>
-               </div>
-           </div>
-           <input type="submit" value="Comprobar y enviar"><br />
-       </form>
-   </div>
+                     <input type="password" class="form-control" name="repassword" id="repassword" placeholder="repetirpassword">
+                 </div>
+             </div>
+         </div>
+         <input type="submit" value="Comprobar y enviar"><br />
+     </form>
+ </div>
 
 
-   <!-- build:js(.) scripts/vendor.js -->
-   <!-- bower:js -->
-   <script src="bower_components/jquery/dist/jquery.js"></script>
-   <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
-   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-   <script src="bower_components/jquery.complexify.js/jquery.complexify.js"></script>
-   <!-- endbower -->
-   <!-- endbuild -->
+ <!-- build:js(.) scripts/vendor.js -->
+ <!-- bower:js -->
+ <script src="bower_components/jquery/dist/jquery.js"></script>
+ <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+ <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+ <script src="bower_components/jquery.complexify.js/jquery.complexify.js"></script>
+ <!-- endbower -->
+ <!-- endbuild -->
 
-   <!-- build:js({app,.tmp}) scripts/main.js -->
-   <script src="scripts/main.js"></script>
-   <!-- endbuild -->
+ <!-- build:js({app,.tmp}) scripts/main.js -->
+ <script src="scripts/main.js"></script>
+ <!-- endbuild -->
 </body>
 </html>
