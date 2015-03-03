@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+
+    $('#provincia').load("http://jorgelopez.infenlaces.com/validacion/consultar_provincias.php");
+
     $('#complexify #password').complexify({}, function (valid, complexity) {
         var progressBar = $('#complexify #complexity-bar');
 
@@ -82,6 +85,12 @@ $(document).ready(function () {
     });
 
     /* FIN CONTRASEÑAS IGUALES */
+
+    /* CODIGO POSTAL LOCALIDAD */
+    $("#cp").keyup(function () {
+        var cod = parseInt($("#cp").val().substring(0,2));
+        $("#provincia option[value="+cod+"]").attr("selected",true);
+    });
 
     /* COMPROBACIONES FORM */
 
