@@ -78,6 +78,16 @@ $(document).ready(function () {
 
     /* COMPROBACION CONTRASEÑAS IGUALES */
 
+    $("#remail").focusout(function(event) {
+        if($("#remail").val()!=$("#email").val()){
+            alert("El campo repetir email es diferente");
+        }
+    });
+
+    /*  FIN */
+
+    /* COMPROBACION CONTRASEÑAS IGUALES */
+
     $("#repassword").change(function(event) {
         if($("#repassword").val() != $("#password").val()){
             alert("El password no coincide");
@@ -90,6 +100,7 @@ $(document).ready(function () {
     $("#cp").keyup(function () {
         var cod = parseInt($("#cp").val().substring(0,2));
         $("#provincia option[value="+cod+"]").attr("selected",true);
+        $("#localidad").val($("#provincia option[value="+cod+"]").attr("selected",true).text());
     });
 
     /* COMPROBACIONES FORM */
@@ -134,7 +145,8 @@ $(document).ready(function () {
                                     return $( "#nif" ).val();
                                 }
                             }
-                        }
+                        },
+                        nifES: true
                     },
                     cif: {
                         required: true,
@@ -181,7 +193,10 @@ $(document).ready(function () {
                         required: "El campo repetir email es requerido",
                         email: "Debe ser tipo email"
                     },
-                    nif: "El nif introducido esta usado",
+                    nif: {
+                        remote: "El nif introducido esta usado",
+                        nifES: "El nif es incorrecto"
+                    },
                     cif: "El campo cif es requerido",
                     nombre_empresa: "El campo nombre de empresa es requerido",
                     direccion: "El campo direccion es requerido",
@@ -222,6 +237,28 @@ $(document).ready(function () {
                     }
                 }
             });
+$.validator.addMethod( "nifES", function( value ) {
+    "use strict";
+
+    value = value.toUpperCase();
+
+    // Basic format test
+    if ( !value.match("((^[A-Z]{1}[0-9]{7}[A-Z0-9]{1}$|^[T]{1}[A-Z0-9]{8}$)|^[0-9]{8}[A-Z]{1}$)") ) {
+        return false;
+    }
+
+    // Test NIF
+    if ( /^[0-9]{8}[A-Z]{1}$/.test( value ) ) {
+        return ( "TRWAGMYFPDXBNJZSQVHLCKE".charAt( value.substring( 8, 0 ) % 23 ) === value.charAt( 8 ) );
+    }
+    // Test specials NIF (starts with K, L or M)
+    if ( /^[KLM]{1}/.test( value ) ) {
+        return ( value[ 8 ] === String.fromCharCode( 64 ) );
+    }
+
+    return false;
+
+}, "Introduzca un nif valido." );
 
 $.validator.addMethod( "cifES", function( value ) {
     "use strict";
